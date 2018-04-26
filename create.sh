@@ -36,8 +36,8 @@ done
 echo
 
 echo "* Updating symlinks..."
-ln -sf $ALL tsv/enwikt-defs-latest-all.tsv.gz
-ln -sf $EN tsv/enwikt-defs-latest-en.tsv.gz
+ln -sfL $ALL tsv/enwikt-defs-latest-all.tsv.gz
+ln -sfL $EN tsv/enwikt-defs-latest-en.tsv.gz
 
 echo
 echo "------------------------------------------------------------------"
