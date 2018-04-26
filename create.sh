@@ -19,7 +19,7 @@ fi
 echo "------------------------------------------------------------------"
 echo "Dumping $IN"
 echo "------------------------------------------------------------------"
-# if ! python2 lib/create.py $IN $ALL; then exit 1; fi
+if ! python2 lib/create.py $IN $ALL; then exit 1; fi
 echo
 
 echo "------------------------------------------------------------------"
@@ -34,6 +34,10 @@ for i in $ALL $EN; do
   if ! $COMPRESSOR $i; then exit 1; fi
 done
 echo
+
+echo "* Updating symlinks..."
+ln -sf $ALL tsv/enwikt-defs-latest-all.tsv.gz
+ln -sf $EN tsv/enwikt-defs-latest-en.tsv.gz
 
 echo
 echo "------------------------------------------------------------------"
