@@ -1,5 +1,5 @@
 #!/bin/bash
-LATEST=`./latest_dump.sh`
+LATEST=`lib/latest_dump.sh`
 URL="https://dumps.wikimedia.org/enwiktionary/$LATEST/enwiktionary-$LATEST-pages-articles.xml.bz2"
 
 if [ ! -d xml ]; then
