@@ -35,9 +35,8 @@ for i in $ALL $EN; do
 done
 echo
 
-echo "* Updating symlinks..."
-ln -sfL $ALL tsv/enwikt-defs-latest-all.tsv.gz
-ln -sfL $EN tsv/enwikt-defs-latest-en.tsv.gz
+echo "* Updating checksums..."
+./checksums.sh
 
 echo
 echo "------------------------------------------------------------------"
