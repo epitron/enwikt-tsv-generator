@@ -12,6 +12,12 @@ echo "  Downloading latest dump ($LATEST)"
 echo "--------------------------------------"
 echo "  $URL"
 echo
-curl -O -C - $URL
+
+if which lftp > /dev/null; then
+  lftp -c "pget -c -n 4 $URL"
+else
+  curl -O -C - $URL
+fi
+
 popd > /dev/null
 
