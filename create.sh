@@ -2,7 +2,7 @@
 IN=`ls -tr xml/* | tail -n1`
 DATE=`echo $IN | grep -oE '20[0-9]{6}'`
 
-ALL="tsv/enwikt-defs-$DATE-all.tsv"
+ALL="tsv/wikt-defs-$DATE-all.tsv"
 EN="${ALL/-all/-en}"
 
 COMPRESSOR=`which pigz gzip 2> /dev/null | head -n1`

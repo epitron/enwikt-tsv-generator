@@ -7,8 +7,8 @@ These scripts convert the Wikipedia Dictionary into a TSV file for easy use in y
 It works by downloading a big XML dump (about 500MB) from Wikipedia's dump server, and then Python 2 scripts convert it to gzipped TSV files (one for the English Wiktionary, and one for All Languages), eg:
 
 ```
-tsv/enwikt-defs-20180220-all.tsv.gz
-tsv/enwikt-defs-20180220-en.tsv.gz
+tsv/wikt-defs-20180220-all.tsv.gz
+tsv/wikt-defs-20180220-en.tsv.gz
 ```
 
 ## Usage
