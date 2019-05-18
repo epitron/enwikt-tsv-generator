@@ -1,0 +1,16 @@
+#!/usr/bin/env ruby
+require 'epitools'
+
+a = Path["tsv/*"]
+
+system("bash", "download.sh")
+system("bash", "create.sh")
+
+b = Path["tsv/*"]
+
+newfiles = (b - a).map { |f| f.filename }
+
+Path.cd("tsv") do
+  system("ia", "upload", "wikt-tsv", *newfiles)
+end
+
